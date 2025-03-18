@@ -1,0 +1,1 @@
+export const usericon = "https://imgs.search.brave.com/jf8_1wX063PKC-Zg1djG45KURANGAmjjdAI7zjcySbI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvbmV0/ZmxpeC1wcm9maWxl/LXBpY3R1cmVzLTEw/MDAteC0xMDAwLTJm/ZzkzZnVuaXB2cWZz/OWkuanBn"

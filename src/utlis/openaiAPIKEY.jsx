@@ -1,0 +1,1 @@
+export const  OPENAI_KEY = import.meta.env.VITE__APP_OPENAI_KEY

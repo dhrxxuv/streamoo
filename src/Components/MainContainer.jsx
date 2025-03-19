@@ -11,7 +11,7 @@ const MainContainer = () => {
 
   return (
 <div className="relative h-screen w-full bg-black">
-  <div className="absolute top-3/4 left-0 right-0 z-20 ">
+  <div className="absolute top-[70%] left-0 right-0 z-20 h-[15%] ">
           <VideoTitle title={original_title} overview={overview} />
   </div>
   <VideoBackground id={id} />

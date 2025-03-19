@@ -54,7 +54,7 @@ const Header = () => {
         navigate("/");
       }
     });
-    return () => unSubscribe();
+    return () => unSubscribe;
   }, [dispatch, navigate]);
 
   useEffect(() => {
@@ -69,10 +69,10 @@ const Header = () => {
   }, [isDropdownOpen]);
 
   return (
-    <div className="absolute top-0 left-0 w-full px-6 py-4 bg-gradient-to-b from-black via-gray-900 to-transparent z-20 flex justify-between items-center shadow-lg hover:shadow-xl transition-all duration-300">
+    <div className="fixed top-0 left-0 w-full px-6 py-4 bg-gradient-to-b from-black via-gray-900 to-transparent z-20 flex justify-between items-center shadow-lg hover:shadow-xl transition-all duration-300">
       <img
-        className="w-32 md:w-44 transform transition-transform duration-300 hover:scale-105"
-        src="logo.png"
+        className="w-28 md:w-36 transform hover:scale-105 transition-transform duration-300"
+        src="streamologo.png"
         alt="Netflix Logo"
       />
       {user && (
@@ -80,7 +80,7 @@ const Header = () => {
           <button
             id="user-button"
             onClick={toggleDropdown}
-            className="flex items-center focus:outline-none transform transition-transform duration-300 hover:scale-110 hover:shadow-md rounded-full overflow-hidden"
+            className="flex items-center focus:outline-none hover:scale-110 transition-transform duration-300 rounded-full overflow-hidden"
           >
             <img
               className="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover hover:brightness-110 transition-all duration-300"
@@ -91,7 +91,7 @@ const Header = () => {
 
           <div
             id="dropdown"
-            className={`absolute right-0 mt-2 w-48 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl transition-all duration-300 ease-in-out origin-top-right ${
+            className={`absolute right-0 mt-2 w-48 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl transition-all duration-300 origin-top-right ${
               isDropdownOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 hidden"
             }`}
           >
@@ -101,7 +101,7 @@ const Header = () => {
 
             <button
               onClick={handlegpt}
-              className="w-full text-left px-4 py-2 text-gray-300 bg-gray-800 hover:bg-gray-700 transition-all duration-300 hover:text-white"
+              className="w-full text-left px-4 py-2 text-gray-300 bg-gray-800 hover:bg-gray-700 hover:text-white transition-all duration-300"
             >
               {tooglegpt ? "Home" : "GPT Search"}
             </button>
@@ -113,7 +113,11 @@ const Header = () => {
                 className="w-full bg-transparent text-white text-sm px-4 py-2 border-b border-gray-700 focus:outline-none appearance-none"
               >
                 {SupportedLanguages.map((lang) => (
-                  <option key={lang.identifier} value={lang.identifier} className="bg-gray-800 hover:bg-gray-700 text-white">
+                  <option 
+                    key={lang.identifier} 
+                    value={lang.identifier} 
+                    className="bg-gray-800 hover:bg-gray-700 text-white"
+                  >
                     {lang.name}
                   </option>
                 ))}
